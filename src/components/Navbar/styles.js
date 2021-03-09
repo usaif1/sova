@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     padding: "0 4rem",
+    background: "black",
   },
 
   /* sova-logo */
@@ -26,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
     width: "70rem",
     padding: "0.5rem",
     borderRadius: "2rem",
+    background: "white",
   },
   input: {
     width: "100%",

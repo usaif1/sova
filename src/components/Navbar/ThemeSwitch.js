@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 //imports
 
 const ThemeSwitch = (props) => {
-  console.log("theme ->", props.theme);
   return <div>Theme Switch</div>;
 };
 

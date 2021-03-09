@@ -6,6 +6,5 @@ const initialState = {
 };
 
 export default function themeReducer(state = initialState, action) {
-  console.log("this is theme reducer");
   return state;
 }

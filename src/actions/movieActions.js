@@ -2,9 +2,13 @@
 import { movie } from "../config/moviesApi";
 
 //action types
-import { FETCH_MOVIES } from "./types";
+import { FETCH_MOVIES, LOADING_TRUE } from "./types";
 
 export const searchByName = (name) => async (dispatch) => {
+  dispatch({
+    type: LOADING_TRUE,
+  });
+
   try {
     const res = await movie.get("", {
       params: {
@@ -12,8 +16,6 @@ export const searchByName = (name) => async (dispatch) => {
         type: "movie",
       },
     });
-
-    console.log(res.data);
 
     dispatch({
       type: FETCH_MOVIES,

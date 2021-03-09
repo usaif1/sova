@@ -1,8 +1,9 @@
 //imports
-import { FETCH_MOVIES } from "../actions/types";
+import { FETCH_MOVIES, LOADING_TRUE } from "../actions/types";
 
 const initialState = {
   movies: [],
+  loading: false,
 };
 
 export default function movieReducer(state = initialState, action) {
@@ -11,8 +12,13 @@ export default function movieReducer(state = initialState, action) {
       return {
         ...state,
         movies: action.payload,
+        loading: false,
       };
-
+    case LOADING_TRUE:
+      return {
+        ...state,
+        loading: true,
+      };
     default:
       return state;
   }

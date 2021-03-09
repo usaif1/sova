@@ -7,8 +7,7 @@ import thunk from "redux-thunk";
 
 //imports
 import reducers from "./reducers";
-import Navbar from "./components/Navbar/Navbar";
-import Homepage from "./components/Homepage/Homepage";
+import Routes from "./Routes";
 
 const middleware = [thunk];
 
@@ -21,8 +20,7 @@ const store = createStore(
 function App() {
   return (
     <Provider store={store}>
-      <Navbar />
-      <Homepage />
+      <Routes />
     </Provider>
   );
 }
