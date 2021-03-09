@@ -16,5 +16,23 @@ export const useStyles = makeStyles((theme) => ({
     border: "solid 1px black",
     width: "21vw",
     margin: "1rem",
+    cursor: "unset",
+  },
+
+  /*text*/
+  textContainer: {
+    marginTop: "10%",
+  },
+
+  /*loader*/
+  loaderContainer: {
+    marginTop: "2rem",
+    display: "flex",
+    justifyContent: "center",
+  },
+
+  /*link*/
+  link: {
+    cursor: "unset",
   },
 }));

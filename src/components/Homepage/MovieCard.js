@@ -8,13 +8,11 @@ const MovieCard = ({ movie }) => {
 
   return (
     <div className={classes.cardContainer}>
-      <div>
-        <img
-          src={movie.Poster}
-          alt={`${movie.Title}-poster`}
-          style={{ width: "100%" }}
-        />
-      </div>
+      <img
+        src={movie.Poster}
+        alt={`${movie.Title}-poster`}
+        style={{ width: "100%", cursor: "pointer" }}
+      />
     </div>
   );
 };

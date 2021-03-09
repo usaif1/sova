@@ -9,10 +9,12 @@ import Movie from "./components/Movie/Movie";
 
 const routes = [
   {
+    id: "1",
     path: "/",
     component: Homepage,
   },
   {
+    id: "2",
     path: "/:id",
     component: Movie,
   },
@@ -23,7 +25,12 @@ const Routes = () => {
     <Router>
       <Navbar />
       {routes.map((route) => (
-        <Route path={route.path} component={route.component} exact />
+        <Route
+          path={route.path}
+          component={route.component}
+          exact
+          key={route.id}
+        />
       ))}
     </Router>
   );
