@@ -49,3 +49,15 @@ export const closeAlert = () => (dispatch) => {
     type: SET_ERROR_FALSE,
   });
 };
+
+export const fetchDetails = async (id) => {
+  try {
+    const res = await movie.get("", {
+      params: {
+        i: id,
+        type: "movie",
+      },
+    });
+    return res.data;
+  } catch (error) {}
+};

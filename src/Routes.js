@@ -24,14 +24,16 @@ const Routes = () => {
   return (
     <Router>
       <Navbar />
-      {routes.map((route) => (
-        <Route
-          path={route.path}
-          component={route.component}
-          exact
-          key={route.id}
-        />
-      ))}
+      <Switch>
+        {routes.map((route) => (
+          <Route
+            path={route.path}
+            component={route.component}
+            exact
+            key={route.id}
+          />
+        ))}
+      </Switch>
     </Router>
   );
 };
